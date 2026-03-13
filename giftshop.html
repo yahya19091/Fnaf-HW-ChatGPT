@@ -1,0 +1,43 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Gift Shop</title>
+<script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+</head>
+
+<body>
+
+<a-scene>
+
+<a-entity camera position="0 1.6 3"></a-entity>
+
+<a-plane rotation="-90 0 0" width="20" height="20" color="#222"></a-plane>
+
+<a-box position="0 1 -3" width="4" height="2" depth="0.3" color="#555"></a-box>
+
+<a-sphere id="c1" visible="false" position="-1 1 -2" radius="0.2" color="gold"></a-sphere>
+<a-box id="c2" visible="false" position="0 1 -2" depth="0.2" height="0.2" width="0.2" color="orange"></a-box>
+<a-cylinder id="c3" visible="false" position="1 1 -2" radius="0.2" height="0.3" color="purple"></a-cylinder>
+<a-sphere id="c4" visible="false" position="-1 1.5 -2" radius="0.2" color="blue"></a-sphere>
+<a-box id="c5" visible="false" position="1 1.5 -2" depth="0.2" height="0.2" width="0.2" color="green"></a-box>
+
+<a-box position="0 1 3" color="red" onclick="window.location.href='index.html'"></a-box>
+<a-text value="Back To Lobby" position="0 2 3"></a-text>
+
+</a-scene>
+
+<script>
+
+if(localStorage.getItem("fnaf1")) document.querySelector("#c1").setAttribute("visible",true)
+if(localStorage.getItem("pizza")) document.querySelector("#c2").setAttribute("visible",true)
+if(localStorage.getItem("bowl")) document.querySelector("#c3").setAttribute("visible",true)
+if(localStorage.getItem("repair")) document.querySelector("#c4").setAttribute("visible",true)
+if(localStorage.getItem("vent")) document.querySelector("#c5").setAttribute("visible",true)
+
+</script>
+
+</body>
+</html>
+```
