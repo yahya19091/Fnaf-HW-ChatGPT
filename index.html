@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>FNAF VR Lobby</title>
+<script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+</head>
+
+<body>
+
+<a-scene>
+
+<a-assets>
+<audio id="lobbyMusic" src="assets/sounds/lobby_music.mp3"></audio>
+</a-assets>
+
+<a-entity sound="src:#lobbyMusic; autoplay:true; loop:true"></a-entity>
+
+<a-entity camera position="0 1.6 4"></a-entity>
+
+<a-plane rotation="-90 0 0" width="30" height="30" color="#222"></a-plane>
+
+<a-box position="0 0.5 -6" width="8" height="1" depth="2" color="#444"></a-box>
+
+<a-box position="-2 1 -6" color="brown"></a-box>
+<a-box position="0 1 -6" color="purple"></a-box>
+<a-box position="2 1 -6" color="yellow"></a-box>
+
+<a-text value="Freddy" position="-2 2 -6"></a-text>
+<a-text value="Bonnie" position="0 2 -6"></a-text>
+<a-text value="Chica" position="2 2 -6"></a-text>
+
+<a-box position="-3 1 0" color="red" onclick="go('fnaf1.html')"></a-box>
+<a-text value="FNAF 1" position="-3 1.8 0"></a-text>
+
+<a-box position="-1 1 0" color="orange" onclick="go('restaurant.html')"></a-box>
+<a-text value="Restaurant" position="-1 1.8 0"></a-text>
+
+<a-box position="1 1 0" color="purple" onclick="go('bonniebowl.html')"></a-box>
+<a-text value="Bonnie Bowl" position="1 1.8 0"></a-text>
+
+<a-box position="3 1 0" color="blue" onclick="go('repair.html')"></a-box>
+<a-text value="Repair" position="3 1.8 0"></a-text>
+
+<a-box position="0 1 2" color="green" onclick="go('vent.html')"></a-box>
+<a-text value="Vent Crawl" position="0 1.8 2"></a-text>
+
+<a-box position="0 1 4" color="gold" onclick="go('giftshop.html')"></a-box>
+<a-text value="Gift Shop" position="0 1.8 4"></a-text>
+
+</a-scene>
+
+<script>
+function go(scene){
+window.location.href = scene
+}
+</script>
+
+</body>
+</html>
+```
